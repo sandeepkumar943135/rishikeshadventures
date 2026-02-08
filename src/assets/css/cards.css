@@ -1,0 +1,172 @@
+.travel-card {
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+  
+  .travel-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  }
+  
+  .image-wrapper {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .image-wrapper img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+  
+  .travel-card:hover img {
+    transform: scale(1.1);
+  }
+  
+  .price {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: #000;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+  }
+  
+  .travel-content {
+    padding: 15px; 
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  .travel-content button {
+    margin-top: auto;
+  }
+  
+  .title {
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+  
+  .location {
+    font-size: 14px;
+    color: gray;
+    margin-bottom: 10px;
+  }
+  
+  .rating {
+    font-size: 18px;
+  }
+  
+.rating {
+  display: flex;
+  gap: 3px;
+  font-size: 18px;
+}
+.rating-number {
+  font-size: 13px;
+  color: gray;
+  margin-left: 5px;
+}
+/* wrapper */
+.star-wrap {
+  position: relative;
+  display: inline-block;
+  color: #ddd; /* empty color */
+}
+
+/* gray back */
+.star-bg {
+  color: #ddd;
+}
+
+/* yellow fill */
+.star-fill {
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  color: #ffc107;
+}
+  
+  .amenities {
+    margin-top: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+  
+  .badge {
+    background: #a30505;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+  }
+
+  
+.button-group {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.button-group .btn {
+  flex: 1;
+  font-size: 13px;
+}
+
+
+.enquiry-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal-box {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  width: 350px;
+  animation: pop 0.3s ease;
+}
+
+.modal-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.modal-box input,
+.modal-box textarea {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+@keyframes pop {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}

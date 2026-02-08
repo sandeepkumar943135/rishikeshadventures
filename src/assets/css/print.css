@@ -1,0 +1,222 @@
+<style>
+      body { 
+        background-color: #ffffff;
+        font-family: Arial, sans-serif;
+        font-size: 11px;
+        overflow-wrap: anywhere;
+            white-space: normal;
+            hyphens: auto;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 11px !important;
+        overflow-wrap: anywhere;
+      }
+
+      table, th, td {
+        border: 1px solid #333333;
+        overflow-wrap: anywhere;
+      }
+
+      th, td {
+        padding: 3px;
+        text-align: left;
+        overflow-wrap: anywhere;
+      }
+
+      th {
+        background-color: #f5f5f5;
+        overflow-wrap: anywhere;
+      }  
+      .print_head {
+        text-align: center; 
+      }
+      .print_head h2 {
+        font-weight: bold;
+        font-size: 14px!important;
+      }
+      .h1 { 
+        margin-top: 0px !important;
+        margin-bottom: 2px !important;
+      }
+      .h2{ 
+        margin-top: 10px !important;
+        margin-bottom: 2px !important;
+      }
+      .h3{ 
+        margin-top: 2px !important;
+        margin-bottom: 5px !important;
+      }
+      .h4{ 
+        margin-top: 2px !important;
+        margin-bottom: 2px !important;
+      } 
+      .print_head p{
+        font-size: 11px!important;   
+      }
+      .p1{
+        margin-top: 2px !important;
+        margin-bottom: 8px !important;
+      }
+      .p2{
+        margin-top: 8px !important;
+        margin-bottom: 2px !important;
+      }
+      .p3,.p4{
+        margin-top: 2px !important;
+        margin-bottom: 2px !important;
+      }
+      .head_tag{
+        width: auto;
+        margin: none;
+        display: flex;
+      }
+      .sub_head1, .sub_head2, .sub_head3{ 
+        display: inline-block;
+      }
+      .sub_head1{
+        width: 20%;
+      } 
+      .sub_head2{
+        width: 59%;
+      } 
+      .sub_head3{
+        width: 20%;
+      }
+      .sub_head1 img{
+        width: 150px;
+        /*margin-bottom: 10px;*/
+      }
+      @media print {
+        /*body {
+            margin: 0;
+            padding: 0;
+            overflow-wrap: anywhere;
+            white-space: normal;
+            hyphens: auto;
+        }*/
+        table {
+          /* width: 100%;*/
+            page-break-inside: avoid; /* Avoid splitting tables */
+        }
+        .page-break {
+            page-break-before: always;
+        }
+        #printPageButton{
+          display: none;
+        }  
+        #invoice { 
+/*          font-family: 'Hind Siliguri', sans-serif; */
+
+          width: 100%; 
+            overflow: visible; /* Ensure content is not clipped */
+            page-break-inside: avoid; /* Avoid breaking inside elements */
+        }
+        #contentToPrint {
+            margin: 3px;
+            padding: 0;
+            height: 0;
+            line-height: 0;
+        }
+/*        #pagebreak { page-break-before: always; } /* page-break-after works, as well */*/
+      }
+      @page 
+      {
+          size:  auto;   /* auto is the initial value */
+          margin: 10mm;  /* this affects the margin in the printer settings */
+      } 
+      .invoice{
+        width: 100%;  
+        display: inline-block;
+/*        margin-left: 10px;*/
+      }
+      .panel{  
+        border: 1px solid #bdbdbd;
+        border-radius: 4px;
+        margin-bottom: 5px;
+      }
+      .panel-heading h4, .panel-heading span{
+        display: inline-block;
+        margin:2px!important;
+        font-size: 16px!important;
+        font-weight: bold;
+      }
+      .panel-heading{
+        padding: 5px;
+        background: #fdaf00 !important; 
+      }
+      .panel-heading span{
+        float: right;
+        
+        font-size: 15px;
+        font-weight: bold;
+      }
+      .display_window{
+        display: flex;
+      }
+      .panel-body{
+        padding: 5px!important;
+        font-size: 13px;
+        background: #c6e4ff;
+      }
+      .table{
+        margin-bottom: 0px!important;
+        font-size: 13px; 
+      }
+      .table td, .table th{
+        padding: 3px!important;
+        font-size: 13px;    
+        border: 1px solid #4779a7!important ;
+      }
+      .table a{
+        font-weight: bold;
+      }
+      .table th{
+        white-space: nowrap;
+        background: #939aa1;
+      }
+      .panel-heading h4 i{
+        color: #d11300!important;
+        font-style: normal;
+      }
+      .object{
+        width: 210mm;
+        height: 297mm;
+      }
+      .left{
+        text-align: left;
+      }
+      .right{
+        text-align: right;
+      }
+      .width100_per{
+        width: 100%!important;
+      }
+      .letter_head{
+        display: inline-block;
+      }
+      .margin_left_20px{
+        margin: 7px 0 0 15px !important;
+      } 
+
+      .no-break {
+    page-break-inside: avoid;
+  }
+
+  /* Add a page break before or after specific elements if needed */
+  .page-break {
+    page-break-before: always;
+  }
+
+  /* Optional: Print-specific styles to manage large content better */
+  @media print {
+    .no-break {
+      page-break-inside: avoid;
+    }
+    .page-break {
+      page-break-before: always;
+    }
+  }
+    </style>

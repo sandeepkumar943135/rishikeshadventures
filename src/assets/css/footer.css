@@ -1,0 +1,97 @@
+.main-footer {
+  background: #111;
+  color: #ddd;
+  margin-top: 60px;
+  padding-top: 40px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.main-footer h4,
+.main-footer h5 {
+  color: white;
+  margin-bottom: 15px;
+}
+
+.main-footer p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.main-footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.main-footer ul li {
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.main-footer a {
+  text-decoration: none;
+  color: #ddd;
+  transition: 0.3s;
+}
+
+.main-footer a:hover {
+  color: #e63946;
+}
+
+/* Social */
+.social span {
+  margin-right: 10px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* Bottom */
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #333;
+  margin-top: 30px;
+  padding: 15px;
+  font-size: 13px;
+}
+
+/* Floating Buttons */
+.float-call,
+.float-whatsapp {
+  position: fixed;
+  bottom: 20px;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  color: white;
+  text-decoration: none;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  z-index: 999;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Left side - Call */
+.float-call {
+  left: 20px;
+  background: #e63946;
+}
+
+/* Right side - WhatsApp */
+.float-whatsapp {
+  right: 20px;
+  background: #25d366;
+}
+
+/* Hover effect */
+.float-call:hover,
+.float-whatsapp:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.4);
+}

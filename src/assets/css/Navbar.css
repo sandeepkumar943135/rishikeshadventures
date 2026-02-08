@@ -1,0 +1,87 @@
+.main-nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+  }
+  
+  .nav-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+  }
+  
+  /* Logo */
+  .logo {
+    font-size: 22px;
+    font-weight: 700;
+  }
+  
+  .logo span {
+    color: #e63946;
+  }
+  
+  /* Links */
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: 0.3s;
+  }
+  
+  .nav-links a:hover {
+    color: #e63946;
+  }
+  
+  /* CTA button */
+  .book-btn {
+    background: #e63946;
+    color: white;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-weight: 600;
+  }
+  
+  .book-btn:hover {
+    background: #c1121f;
+  }
+  
+  /* Mobile */
+  .menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: block;
+    }
+  
+    .nav-links {
+      position: absolute;
+      right: 0;
+      top: 60px;
+      background: white;
+      flex-direction: column;
+      width: 220px;
+      padding: 15px;
+      gap: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      display: none;
+    }
+  
+    .nav-links.active {
+      display: flex;
+    }
+  }

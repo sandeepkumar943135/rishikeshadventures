@@ -1,0 +1,182 @@
+.hero-banner {
+  position: relative;
+  background: url("https://rishikeshadventures.com/images/banner3_1.jpeg") center/cover no-repeat;
+  padding: 200px 0;
+  color: white;
+  /* margin-top: 150px;; */
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.55);
+  padding: 120px 0;
+}
+
+.hero-content {
+  max-width: 900px;
+}
+
+.hero-content h1 {
+  font-size: 42px;
+  font-weight: 700;
+}
+
+.hero-content h3 {
+  margin-top: 10px;
+  font-weight: 400;
+}
+
+.hero-content p {
+  margin: 10px 0 25px;
+  letter-spacing: 1px;
+}
+
+/* Callback box */
+.callback-box {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.15);
+  padding: 20px;
+  border-radius: 15px;
+  /* max-width: 750px; */
+}
+
+.callback-box h5 {
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+/* Form */
+.callback-box form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+}
+
+.callback-box input {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+
+.callback-box button {
+  background: #e63946;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.callback-box button:hover {
+  background: #c1121f;
+}
+
+/* ────────────────────────────────
+   MOBILE & TABLET RESPONSIVE FIXES
+   ──────────────────────────────── */
+
+@media (max-width: 991px) {   /* ← better breakpoint for tablets too */
+  .hero-banner {
+    padding: 100px 20px 60px;           /* less top padding than desktop */
+    margin-top: 0;                      /* usually navbar is fixed → no need for extra margin */
+    min-height: 80vh;                   /* prevent content from being too squished */
+  }
+
+  .overlay {
+    padding: 50px 20px;                 /* breathing room on sides */
+  }
+
+  .hero-content {
+    text-align: center;                 /* most mobile hero texts are centered */
+  }
+
+  .hero-content h1 {
+    font-size: clamp(1.9rem, 6vw, 2.6rem);   /* scales nicely */
+    line-height: 1.25;
+    margin-bottom: 1rem;
+  }
+
+  .hero-content h3 {
+    font-size: clamp(1.1rem, 4vw, 1.4rem);
+    margin-bottom: 1.25rem;
+    opacity: 0.95;
+  }
+
+  .hero-content p {
+    font-size: clamp(0.95rem, 3.5vw, 1.1rem);
+    line-height: 1.55;
+    max-width: 90%;
+    margin: 0 auto 1.8rem;
+  }
+
+  /* Callback / Request Form */
+  .callback-box {
+    max-width: 480px;                   /* prevent it from being too wide */
+    margin: 2rem auto 1rem;
+    padding: 1.8rem 1.4rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.12);
+  }
+
+  .callback-box form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .callback-box input,
+  .callback-box select,
+  .callback-box textarea,
+  .callback-box button {
+    width: 100%;
+    padding: 14px 16px;
+    font-size: 1rem;
+    border-radius: 10px;
+  }
+
+  .callback-box button {
+    padding: 15px;
+    font-size: 1.05rem;
+    font-weight: 600;
+  }
+
+  /* Common mobile improvements */
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+
+/* ────────────────────────────────
+   SMALL PHONES (≤ 480px)
+   ──────────────────────────────── */
+
+@media (max-width: 480px) {
+  .hero-banner {
+    padding-top: 90px;
+    padding-bottom: 50px;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(1.7rem, 7.5vw, 2.2rem);
+  }
+
+  .hero-content h3 {
+    font-size: 1.15rem;
+  }
+
+  .hero-content p {
+    font-size: 0.97rem;
+  }
+
+  .callback-box {
+    padding: 1.4rem 1.1rem;
+    margin: 1.5rem 10px;
+  }
+
+  .callback-box input,
+  .callback-box button {
+    padding: 13px 15px;
+    font-size: 0.98rem;
+  }
+}
